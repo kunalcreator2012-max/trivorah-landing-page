@@ -1,0 +1,196 @@
+/* ============================================================
+   TRIVORAH — Colors & Type Foundations
+   Health & wellness · naturopathy · holistic care
+   Grounded in the watercolor-poppy wordmark.
+   ------------------------------------------------------------
+   Fonts are loaded from Google Fonts as the closest match to
+   the brand wordmark (Lora ≈ the serif logotype). Swap with
+   licensed brand files in /fonts if/when provided.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+:root {
+  /* ---------- PRIMARY · MUSTARD (deep earthy ochre) ----------
+     400 is the BRAND MAIN. Pair solid fills with --ink text,
+     or step to 600/700 when white text is required. ---------- */
+  --mustard-900: #3E2F0A;
+  --mustard-800: #5E4912;
+  --mustard-700: #7E6318;
+  --mustard-600: #A07F22;
+  --mustard-500: #BD9A33;
+  --mustard-400: #D2B14B;  /* ★ brand main */
+  --mustard-300: #E2C977;
+  --mustard-200: #EEDDA6;
+  --mustard-100: #F6ECCB;
+  --mustard-50:  #FBF6E6;
+
+  /* ---------- SECONDARY · ACCENT BLUE (watercolor poppy) ---------- */
+  --blue-900: #16335E;
+  --blue-800: #1D416F;
+  --blue-700: #234B7E;
+  --blue-600: #2F5C95;  /* accent blue (cool counterpoint) */
+  --blue-500: #4571A8;
+  --blue-400: #6E8FBE;
+  --blue-300: #9CB2D4;
+  --blue-200: #C7D4E7;
+  --blue-100: #E4EBF4;
+  --blue-50:  #F2F5FA;
+
+  /* ---------- BOTANICAL SAGE (secondary / nature) ---------- */
+  --sage-700: #4C5E47;
+  --sage-600: #5E7359;
+  --sage-500: #7A8C6F;
+  --sage-300: #B4C0A6;
+  --sage-200: #D6DDCC;
+  --sage-50:  #EEF1E8;
+
+  /* ---------- GOLD (legacy alias — folded into mustard primary) ---------- */
+  --gold-600: #B58E2E;
+  --gold-500: #C7A23F;
+  --gold-300: #E0C97E;
+  --gold-100: #F3E9CC;
+
+  /* ---------- INK & WARM NEUTRALS ---------- */
+  --ink:       #2B2B2E;  /* logotype charcoal — primary text */
+  --ink-soft:  #45464A;
+  --gray-600:  #6B6C70;  /* secondary text */
+  --gray-500:  #8A8A8C;
+  --gray-400:  #A9A8A4;  /* muted / placeholder */
+  --line:      #E4E2DB;  /* hairline borders */
+  --line-soft: #EEEDE7;
+
+  /* ---------- SURFACES (warm paper) ---------- */
+  --paper:    #F4F1E8;  /* default page background — warm cream */
+  --paper-2:  #FAF7EE;  /* raised paper */
+  --surface:  #FFFFFF;  /* cards */
+  --overlay:  rgba(22, 28, 34, 0.42);
+
+  /* ---------- SEMANTIC ---------- */
+  --success: #5E7359;   /* sage */
+  --success-bg: #EEF1E8;
+  --info: #2F5C95;      /* accent blue */
+  --info-bg: #E4EBF4;
+  --warning: #B5722A;   /* amber (kept distinct from mustard primary) */
+  --warning-bg: #F6E7D0;
+  --danger: #A8513A;    /* warm terracotta */
+  --danger-bg: #F3E3DD;
+
+  /* ---------- PRIMARY ALIASES ---------- */
+  --primary:      var(--mustard-400);  /* brand main */
+  --primary-deep: var(--mustard-600);  /* fills w/ white text, borders */
+  --primary-press:var(--mustard-700);
+  --primary-tint: var(--mustard-100);  /* soft backgrounds */
+  --primary-soft: var(--mustard-50);
+  --on-primary:   var(--ink);          /* text on the mustard main */
+  --accent:       var(--blue-600);     /* secondary cool accent / links */
+
+  /* ---------- FOREGROUND ALIASES (semantic) ---------- */
+  --fg1: var(--ink);        /* primary text */
+  --fg2: var(--gray-600);   /* secondary text */
+  --fg3: var(--gray-400);   /* tertiary / muted */
+  --bg1: var(--paper);
+  --bg2: var(--paper-2);
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;     /* display / headings — brand voice */
+  --font-sans:  'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* body / UI */
+
+  /* ---------- TYPE SCALE (fluid) ---------- */
+  --text-display: clamp(2.75rem, 5.5vw, 4.5rem);  /* 44 → 72 */
+  --text-h1: clamp(2.1rem, 4vw, 3rem);            /* 34 → 48 */
+  --text-h2: clamp(1.6rem, 2.6vw, 2.125rem);      /* 26 → 34 */
+  --text-h3: clamp(1.3rem, 1.8vw, 1.5rem);        /* 21 → 24 */
+  --text-h4: 1.1875rem;   /* 19 */
+  --text-lead: 1.3125rem; /* 21 — intro paragraphs */
+  --text-body: 1.0625rem; /* 17 */
+  --text-sm: 0.9375rem;   /* 15 */
+  --text-xs: 0.8125rem;   /* 13 */
+  --text-eyebrow: 0.78rem;/* 12.5 — overline */
+
+  /* ---------- WEIGHTS ---------- */
+  --w-light: 300;
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --w-bold: 700;
+
+  /* ---------- LINE HEIGHT / TRACKING ---------- */
+  --lh-tight: 1.1;
+  --lh-snug: 1.28;
+  --lh-body: 1.62;
+  --tracking-eyebrow: 0.18em;
+  --tracking-tight: -0.015em;
+
+  /* ---------- RADII ---------- */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  /* ---------- SHADOWS (soft, warm, low-contrast) ---------- */
+  --shadow-xs: 0 1px 2px rgba(43, 43, 46, 0.05);
+  --shadow-sm: 0 2px 8px rgba(43, 43, 46, 0.06);
+  --shadow-md: 0 10px 30px -12px rgba(62, 47, 10, 0.16);
+  --shadow-lg: 0 24px 60px -20px rgba(62, 47, 10, 0.20);
+  --shadow-mustard: 0 12px 30px -12px rgba(160, 127, 34, 0.45);
+  --shadow-blue: 0 14px 34px -14px rgba(47, 92, 149, 0.42);
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   ============================================================ */
+
+.t-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--w-semibold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--mustard-700);
+}
+
+.t-display {
+  font-family: var(--font-serif);
+  font-weight: var(--w-500, 500);
+  font-weight: 500;
+  font-size: var(--text-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--ink);
+}
+
+.t-h1 { font-family: var(--font-serif); font-weight: 500; font-size: var(--text-h1); line-height: var(--lh-tight); letter-spacing: var(--tracking-tight); color: var(--ink); }
+.t-h2 { font-family: var(--font-serif); font-weight: 500; font-size: var(--text-h2); line-height: var(--lh-snug); color: var(--ink); }
+.t-h3 { font-family: var(--font-serif); font-weight: 500; font-size: var(--text-h3); line-height: var(--lh-snug); color: var(--ink); }
+.t-h4 { font-family: var(--font-sans); font-weight: var(--w-bold); font-size: var(--text-h4); line-height: 1.4; color: var(--ink); }
+
+.t-lead { font-family: var(--font-sans); font-weight: var(--w-regular); font-size: var(--text-lead); line-height: 1.5; color: var(--ink-soft); }
+.t-body { font-family: var(--font-sans); font-weight: var(--w-regular); font-size: var(--text-body); line-height: var(--lh-body); color: var(--ink-soft); }
+.t-sm { font-family: var(--font-sans); font-weight: var(--w-regular); font-size: var(--text-sm); line-height: 1.5; color: var(--gray-600); }
+.t-xs { font-family: var(--font-sans); font-weight: var(--w-regular); font-size: var(--text-xs); line-height: 1.45; color: var(--gray-600); }
+
+.t-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: var(--w-regular);
+  font-size: var(--text-h3);
+  line-height: 1.5;
+  color: var(--blue-700);
+}
+
+a { color: var(--blue-600); text-underline-offset: 3px; }
